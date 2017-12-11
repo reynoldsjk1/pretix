@@ -1,4 +1,4 @@
-django-debug-toolbar==1.8
+django-debug-toolbar==1.9
 sqlparse==0.2.1  # pinned due to difficulties with django-debug-toolbar
 # Testing requirements
 pep8==1.5.7  # exact requirement by flake8 2.4.0
@@ -7,12 +7,11 @@ pep8-naming
 flake8
 codecov
 coverage
-pytest==3.0.*
+pytest==3.3.*
 pytest-django
 isort
-pytest-mock==1.4.*
+pytest-mock==1.6.*
 pytest-rerunfailures
-pytest-warnings
 pytest-cache
 pytest-sugar
 responses

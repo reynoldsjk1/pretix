@@ -3,13 +3,13 @@ import io
 from defusedcsv import csv
 from django.conf import settings
 from django.contrib import messages
-from django.core.urlresolvers import resolve, reverse
 from django.db import transaction
 from django.db.models import Exists, OuterRef, Q, Sum
 from django.http import (
     Http404, HttpResponse, HttpResponseBadRequest, HttpResponseRedirect,
     JsonResponse,
 )
+from django.urls import resolve, reverse
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import (

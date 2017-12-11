@@ -11,7 +11,7 @@ class OrganizerViewSet(viewsets.ReadOnlyModelViewSet):
     lookup_url_kwarg = 'organizer'
 
     def get_queryset(self):
-        if self.request.user.is_authenticated():
+        if self.request.user.is_authenticated:
             if self.request.user.is_superuser:
                 return Organizer.objects.all()
             else:

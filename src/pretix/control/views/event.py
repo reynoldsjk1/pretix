@@ -7,13 +7,13 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.contenttypes.models import ContentType
 from django.core.files import File
-from django.core.urlresolvers import reverse
 from django.db import transaction
 from django.http import (
     Http404, HttpResponse, HttpResponseBadRequest, HttpResponseNotAllowed,
     JsonResponse,
 )
 from django.shortcuts import get_object_or_404, redirect
+from django.urls import reverse
 from django.utils import translation
 from django.utils.formats import date_format
 from django.utils.functional import cached_property

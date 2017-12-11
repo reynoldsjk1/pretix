@@ -161,7 +161,7 @@ def build_cancellation(invoice: Invoice):
 
 
 def generate_cancellation(invoice: Invoice, trigger_pdf=True):
-    cancellation = copy.copy(invoice)
+    cancellation = copy.deepcopy(invoice)
     cancellation.pk = None
     cancellation.invoice_no = None
     cancellation.prefix = None

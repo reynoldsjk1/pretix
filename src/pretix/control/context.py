@@ -2,7 +2,7 @@ import sys
 from importlib import import_module
 
 from django.conf import settings
-from django.core.urlresolvers import Resolver404, get_script_prefix, resolve
+from django.urls import Resolver404, get_script_prefix, resolve
 
 from pretix.base.settings import GlobalSettingsObject
 

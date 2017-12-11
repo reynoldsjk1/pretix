@@ -2,8 +2,8 @@ import json
 
 import dateutil.parser
 import pytz
-from django.core.urlresolvers import resolve, reverse
 from django.dispatch import receiver
+from django.urls import resolve, reverse
 from django.utils.formats import date_format
 from django.utils.translation import ugettext_lazy as _
 

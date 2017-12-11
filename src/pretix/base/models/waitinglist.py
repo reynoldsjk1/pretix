@@ -42,10 +42,10 @@ class WaitingListEntry(LoggedModel):
     voucher = models.ForeignKey(
         'Voucher',
         verbose_name=_("Assigned voucher"),
-        null=True, blank=True
+        null=True, blank=True, on_delete=models.CASCADE
     )
     item = models.ForeignKey(
-        Item, related_name='waitinglistentries',
+        Item, related_name='waitinglistentries', on_delete=models.CASCADE,
         verbose_name=_("Product"),
         help_text=_(
             "The product the user waits for."
@@ -53,7 +53,7 @@ class WaitingListEntry(LoggedModel):
     )
     variation = models.ForeignKey(
         ItemVariation, related_name='waitinglistentries',
-        null=True, blank=True,
+        null=True, blank=True, on_delete=models.CASCADE,
         verbose_name=_("Product variation"),
         help_text=_(
             "The variation of the product selected above."

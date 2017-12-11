@@ -961,7 +961,7 @@ class OrderChangeManager:
             op.save()
 
         try:
-            ia = copy.copy(self.order.invoice_address)
+            ia = copy.deepcopy(self.order.invoice_address)
             ia.pk = None
             ia.order = split_order
             ia.save()
@@ -981,7 +981,7 @@ class OrderChangeManager:
             split_order.total += fee.value
 
         for fee in self.order.fees.exclude(fee_type=OrderFee.FEE_TYPE_PAYMENT):
-            new_fee = copy.copy(fee)
+            new_fee = copy.deepcopy(fee)
             new_fee.pk = None
             new_fee.order = split_order
             split_order.total += new_fee.value
